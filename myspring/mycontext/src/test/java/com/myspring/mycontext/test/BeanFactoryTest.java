@@ -45,5 +45,4 @@ public class BeanFactoryTest {
         //3.对象调用对象方法
         helloWorld.sayHello();
     }
-
 }
