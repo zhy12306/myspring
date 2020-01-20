@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +127,7 @@
       <workItem from="1579436701325" duration="3639000" />
       <workItem from="1579440367872" duration="575000" />
       <workItem from="1579487883526" duration="1133000" />
-      <workItem from="1579489433390" duration="619000" />
+      <workItem from="1579489433390" duration="777000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1579487943161</created>
@@ -144,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579489500689</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加readmd文件，添加对项目的描述">
+      <created>1579490124518</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579490124518</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +172,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="添加gitignore文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加gitignore文件" />
+    <MESSAGE value="添加readmd文件，添加对项目的描述" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加readmd文件，添加对项目的描述" />
   </component>
 </project>
