@@ -31,3 +31,5 @@ test-output/
 .gradle/
 .settings/
 **/target/
+
+!**/com/myspring/mycontext/log/

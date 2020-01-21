@@ -1,7 +1,10 @@
 package com.myspring.mycontext.test;
 
 import com.myspring.mycontext.BeanDefinition;
-import com.myspring.mycontext.BeanFactory;
+import com.myspring.mycontext.exception.BeanCreateException;
+import com.myspring.mycontext.factory.AbstractBeanFactory;
+import com.myspring.mycontext.factory.AutowireCapableBeanFactory;
+import com.myspring.mycontext.factory.BeanFactory;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,7 +20,7 @@ public class BeanFactoryTest {
 
     @Before
     /**
-     * @Desc 创建bean工厂
+     * @Desc 初始化创建bean工厂
      * @Param []
      * @Return void
      * @Throws
@@ -25,7 +28,7 @@ public class BeanFactoryTest {
      * @Date 2020/1/19
      */
     public void creatBeanFactory() {
-        beanFactory = new BeanFactory();
+        beanFactory = new AutowireCapableBeanFactory();
     }
 
     @Test
@@ -39,7 +42,11 @@ public class BeanFactoryTest {
      */
     public void test() {
         //1.注册bean对象
-        beanFactory.registryBeanDefinition("helloWorld", new BeanDefinition(new HelloWorld()));
+        try {
+            beanFactory.registryBeanDefinition("helloWorld", new BeanDefinition().setBeanClassName("com.myspring.mycontext.test.HelloWorld"));
+        } catch (BeanCreateException e) {
+            e.printStackTrace();
+        }
         //2.获取bean对象
         HelloWorld helloWorld = (HelloWorld) beanFactory.getBean("helloWorld");
         //3.对象调用对象方法
