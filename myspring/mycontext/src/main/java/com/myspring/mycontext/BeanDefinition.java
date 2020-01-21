@@ -5,7 +5,7 @@ import com.myspring.mycontext.exception.BeanCreateException;
 
 /**
  * @ClassName BeanDefinition
- * @Description 实例定义
+ * @Description bean的内容及元数据，保存在BeanFactory中，包装bean的实体
  * @DateTime 2020/1/19 8:34 下午
  * @Author yang
  */
@@ -13,6 +13,7 @@ public class BeanDefinition {
     private Object bean;
     private Class beanClass;
     private String beanClassName;
+    private  PropertyValues propertyValues;
 
     public BeanDefinition() {
 
@@ -53,5 +54,12 @@ public class BeanDefinition {
         return this;
     }
 
+    public PropertyValues getPropertyValues() {
+        return propertyValues;
+    }
 
+    public BeanDefinition setPropertyValues(PropertyValues propertyValues) {
+        this.propertyValues = propertyValues;
+        return this;
+    }
 }

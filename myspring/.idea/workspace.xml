@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="" />
+    <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/BeanFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/BeanFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorld.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +66,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -129,7 +137,8 @@
       <workItem from="1579487883526" duration="1133000" />
       <workItem from="1579489433390" duration="11533000" />
       <workItem from="1579510816780" duration="4605000" />
-      <workItem from="1579569966486" duration="906000" />
+      <workItem from="1579569966486" duration="1549000" />
+      <workItem from="1579571781673" duration="4773000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1579487943161</created>
@@ -166,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579570666120</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加 AutowireBeanfactory，实现 自动根据对象类 class、类名自动创建bean对象。">
+      <created>1579570898556</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579570898556</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,8 +1,9 @@
 package com.myspring.mycontext.test;
 
 import com.myspring.mycontext.BeanDefinition;
+import com.myspring.mycontext.PropertyValue;
+import com.myspring.mycontext.PropertyValues;
 import com.myspring.mycontext.exception.BeanCreateException;
-import com.myspring.mycontext.factory.AbstractBeanFactory;
 import com.myspring.mycontext.factory.AutowireCapableBeanFactory;
 import com.myspring.mycontext.factory.BeanFactory;
 import org.junit.Before;
@@ -42,8 +43,9 @@ public class BeanFactoryTest {
      */
     public void test() {
         //1.注册bean对象
+        boolean add = new PropertyValues().getPropertyValues().add(new PropertyValue("whatUWannaSay", "U are so Beautiful"));
         try {
-            beanFactory.registryBeanDefinition("helloWorld", new BeanDefinition().setBeanClassName("com.myspring.mycontext.test.HelloWorld"));
+            beanFactory.registryBeanDefinition("helloWorld", new BeanDefinition().setBeanClassName("com.myspring.mycontext.test.HelloWorld").setPropertyValues(new PropertyValues().addPropertyValue(new PropertyValue("whatUWannaSay", "U are so Beautiful"))));
         } catch (BeanCreateException e) {
             e.printStackTrace();
         }
