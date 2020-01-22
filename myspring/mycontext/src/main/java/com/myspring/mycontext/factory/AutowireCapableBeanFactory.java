@@ -30,6 +30,12 @@ public class AutowireCapableBeanFactory extends AbstractBeanFactory {
         return null;
     }
 
+    /**
+     * 将属性集合中的属性注入到对象中
+     * @param bean
+     * @param beanDefinition
+     * @throws Exception
+     */
     private void applyPropertyValues(Object bean, BeanDefinition beanDefinition) throws Exception {
         List<PropertyValue> propertyValueList = beanDefinition.getPropertyValues().getPropertyValues();
         long startTime = System.currentTimeMillis();

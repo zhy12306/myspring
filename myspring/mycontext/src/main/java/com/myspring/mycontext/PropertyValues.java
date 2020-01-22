@@ -16,12 +16,26 @@ public class PropertyValues {
     public PropertyValues() {
     }
 
+    /**
+     * @Desc 添加属性值
+     * @Param [propertyValue]
+     * @Return com.myspring.mycontext.PropertyValues
+     * @Author yang
+     * @Date 2020/1/21
+     */
     public PropertyValues addPropertyValue(PropertyValue propertyValue) {
         //TODO 这里需要对重复 PropertyName 进行判断，直接使用 List 无法做到
         this.propertyValueList.add(propertyValue);
         return this;
     }
 
+    /**
+     * @Desc 获取属性值
+     * @Param []
+     * @Return java.util.List<com.myspring.mycontext.PropertyValue>
+     * @Author yang
+     * @Date 2020/1/21
+     */
     public List<PropertyValue> getPropertyValues() {
         return this.propertyValueList;
     }

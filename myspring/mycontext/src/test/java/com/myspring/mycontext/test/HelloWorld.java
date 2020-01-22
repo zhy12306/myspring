@@ -9,6 +9,10 @@ package com.myspring.mycontext.test;
 public class HelloWorld {
     private String whatUWannaSay;
 
+    public void setWhatUWannaSay(String whatUWannaSay) {
+        this.whatUWannaSay = whatUWannaSay;
+    }
+
     public void sayHello() {
         System.out.println("Hello world!\r\n"+whatUWannaSay+"\r\nI'm waiting for you!!");
     }

@@ -19,7 +19,6 @@ public abstract class AbstractBeanFactory implements BeanFactory {
      * @Desc 将对象注册到beanfactory中
      * @Param [name, beanDefinition]
      * @Return void
-     * @Throws
      * @Author yang
      * @Date 2020/1/20
      */
@@ -34,7 +33,6 @@ public abstract class AbstractBeanFactory implements BeanFactory {
      * @Desc 根据对象名获取bean对象
      * @Param [name]
      * @Return java.lang.Object
-     * @Throws
      * @Author yang
      * @Date 2020/1/20
      */

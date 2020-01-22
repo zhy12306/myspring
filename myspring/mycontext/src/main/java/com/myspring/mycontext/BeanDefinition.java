@@ -13,7 +13,7 @@ public class BeanDefinition {
     private Object bean;
     private Class beanClass;
     private String beanClassName;
-    private  PropertyValues propertyValues;
+    private PropertyValues propertyValues=new PropertyValues();
 
     public BeanDefinition() {
 
@@ -41,6 +41,13 @@ public class BeanDefinition {
         return beanClassName;
     }
 
+    /**
+     * @Desc 设置 bean 的 classname
+     * @Param [beanClassName]
+     * @Return com.myspring.mycontext.BeanDefinition
+     * @Author yang
+     * @Date 2020/1/21 3:46 下午
+     */
     public BeanDefinition setBeanClassName(String beanClassName) throws BeanCreateException {
         if (beanClassName == null || beanClassName.trim().length() == 0) {
             throw new BeanCreateException(BeanCreateErrorCode.BC001.getErrorCode(), BeanCreateErrorCode.BC001.getErrorMessage() + beanClassName + "失败！");

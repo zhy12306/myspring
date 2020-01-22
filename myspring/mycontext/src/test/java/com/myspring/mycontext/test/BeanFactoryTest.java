@@ -6,8 +6,13 @@ import com.myspring.mycontext.PropertyValues;
 import com.myspring.mycontext.exception.BeanCreateException;
 import com.myspring.mycontext.factory.AutowireCapableBeanFactory;
 import com.myspring.mycontext.factory.BeanFactory;
+import com.myspring.mycontext.io.ResourceLoader;
+import com.myspring.mycontext.xml.XmlBeanDefinitionReader;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @ClassName BeanFactoryTest
@@ -24,7 +29,6 @@ public class BeanFactoryTest {
      * @Desc 初始化创建bean工厂
      * @Param []
      * @Return void
-     * @Throws
      * @Author yang
      * @Date 2020/1/19
      */
@@ -37,17 +41,18 @@ public class BeanFactoryTest {
      * @Desc 测试
      * @Param []
      * @Return void
-     * @Throws
      * @Author yang
      * @Date 2020/1/19
      */
-    public void test() {
+    public void test() throws Exception {
         //1.注册bean对象
-        boolean add = new PropertyValues().getPropertyValues().add(new PropertyValue("whatUWannaSay", "U are so Beautiful"));
-        try {
-            beanFactory.registryBeanDefinition("helloWorld", new BeanDefinition().setBeanClassName("com.myspring.mycontext.test.HelloWorld").setPropertyValues(new PropertyValues().addPropertyValue(new PropertyValue("whatUWannaSay", "U are so Beautiful"))));
-        } catch (BeanCreateException e) {
-            e.printStackTrace();
+        XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(new ResourceLoader());
+        xmlBeanDefinitionReader.loadBeanDefinition("myspringcontextIOC.xml");
+        Set<Map.Entry<String, BeanDefinition>> beanSet = xmlBeanDefinitionReader.getRegistry().entrySet();
+        for (Map.Entry<String, BeanDefinition> beanDefinitionEntry : beanSet) {
+            String key = beanDefinitionEntry.getKey();
+            BeanDefinition beanDefinition = beanDefinitionEntry.getValue();
+            beanFactory.registryBeanDefinition(key, beanDefinition);
         }
         //2.获取bean对象
         HelloWorld helloWorld = (HelloWorld) beanFactory.getBean("helloWorld");

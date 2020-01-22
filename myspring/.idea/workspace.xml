@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/AbstractBeanDefinitionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinitionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/io/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/io/ResourceLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/io/UrlResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/xml/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/resources/myspringcontextIOC.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/io/ResourceLoadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/test/resources/myspringcontextIOC.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AbstractBeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AutowireCapableBeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/BeanFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/BeanFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorld.java" afterDir="false" />
@@ -19,8 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Tag Library Descriptor" />
         <option value="Class" />
       </list>
     </option>
@@ -56,7 +67,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mycontext/src/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,7 +77,12 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mycontext/src/test" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -80,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BeanFactoryTest">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="myspring" />
       <working_directory value="$PROJECT_DIR$" />
@@ -100,6 +116,21 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="BeanFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mycontext" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myspring.mycontext.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.myspring.mycontext.test" />
+      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.BeanFactoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BeanFactoryTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mycontext" />
       <extension name="coverage">
@@ -116,9 +147,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ResourceLoadTest.testIO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mycontext" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myspring.mycontext.test.io.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.myspring.mycontext.test.io" />
+      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.io.ResourceLoadTest" />
+      <option name="METHOD_NAME" value="testIO" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BeanFactoryTest" />
         <item itemvalue="JUnit.BeanFactoryTest.test" />
+        <item itemvalue="JUnit.ResourceLoadTest.testIO" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +187,11 @@
       <workItem from="1579489433390" duration="11533000" />
       <workItem from="1579510816780" duration="4605000" />
       <workItem from="1579569966486" duration="1549000" />
-      <workItem from="1579571781673" duration="4773000" />
+      <workItem from="1579571781673" duration="5684000" />
+      <workItem from="1579588980678" duration="8154000" />
+      <workItem from="1579676025947" duration="1792000" />
+      <workItem from="1579677850766" duration="18000" />
+      <workItem from="1579678312307" duration="5892000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1579487943161</created>
@@ -182,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579570898556</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="添加 PropertyValue，在创建 bean 对象时实现属性注入">
+      <created>1579588339175</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579588339175</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +267,38 @@
     <MESSAGE value="添加readmd文件，添加对项目的描述" />
     <MESSAGE value="更改gitignore文件，添加对target文件夹的忽略" />
     <MESSAGE value="添加 AutowireBeanfactory，实现 自动根据对象类 class、类名自动创建bean对象。" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加 AutowireBeanfactory，实现 自动根据对象类 class、类名自动创建bean对象。" />
+    <MESSAGE value="添加 PropertyValue，在创建 bean 对象时实现属性注入" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加 PropertyValue，在创建 bean 对象时实现属性注入" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/xml/XmlBeanDefinitionReader.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/xml/XmlBeanDefinitionReader.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/xml/XmlBeanDefinitionReader.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/io/ResourceLoadTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValues.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
