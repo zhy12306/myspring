@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/AbstractBeanDefinitionReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinitionReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/io/Resource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/io/ResourceLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/io/UrlResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/xml/XmlBeanDefinitionReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/resources/myspringcontextIOC.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/io/ResourceLoadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/test/resources/myspringcontextIOC.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AbstractBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/BeanFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/BeanFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/resources/myspringcontextIOC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/resources/myspringcontextIOC.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +177,12 @@
       <workItem from="1579588980678" duration="8154000" />
       <workItem from="1579676025947" duration="1792000" />
       <workItem from="1579677850766" duration="18000" />
-      <workItem from="1579678312307" duration="5892000" />
+      <workItem from="1579678312307" duration="6551000" />
+      <workItem from="1579965455017" duration="63000" />
+      <workItem from="1580039892290" duration="598000" />
+      <workItem from="1580044451207" duration="11000" />
+      <workItem from="1580047629970" duration="10000" />
+      <workItem from="1580103120749" duration="1997000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1579487943161</created>
@@ -242,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579588339175</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加通过读取 xml 配置，实现 bean 属性注入">
+      <created>1579686811333</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579686811333</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +266,8 @@
     <MESSAGE value="更改gitignore文件，添加对target文件夹的忽略" />
     <MESSAGE value="添加 AutowireBeanfactory，实现 自动根据对象类 class、类名自动创建bean对象。" />
     <MESSAGE value="添加 PropertyValue，在创建 bean 对象时实现属性注入" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加 PropertyValue，在创建 bean 对象时实现属性注入" />
+    <MESSAGE value="添加通过读取 xml 配置，实现 bean 属性注入" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加通过读取 xml 配置，实现 bean 属性注入" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

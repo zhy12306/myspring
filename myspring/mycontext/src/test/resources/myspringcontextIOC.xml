@@ -10,6 +10,7 @@
 
     <bean name="helloWorld" class="com.myspring.mycontext.test.HelloWorld">
         <property name="whatUWannaSay" value="U are so beautiful!!"></property>
+        <property name="reason" value="how beautiful U are!!"></property>
     </bean>
 
 </beans>
