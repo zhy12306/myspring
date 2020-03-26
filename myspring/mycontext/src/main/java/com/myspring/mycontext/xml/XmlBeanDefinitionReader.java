@@ -3,7 +3,7 @@ package com.myspring.mycontext.xml;
 import com.myspring.mycontext.AbstractBeanDefinitionReader;
 import com.myspring.mycontext.BeanDefinition;
 import com.myspring.mycontext.PropertyValue;
-import com.myspring.mycontext.exception.BeanCreateException;
+import com.myspring.mycontext.exception.BeanException;
 import com.myspring.mycontext.io.ResourceLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -45,12 +45,12 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         }
     }
 
-    protected void registerBeanDefinition(Document document) throws BeanCreateException {
+    protected void registerBeanDefinition(Document document) throws BeanException {
         Element root = document.getDocumentElement();
         processBeanDefinitions(root);
     }
 
-    private void processBeanDefinitions(Element root) throws BeanCreateException {
+    private void processBeanDefinitions(Element root) throws BeanException {
         NodeList childNodes = root.getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
             Node item = childNodes.item(i);
@@ -61,7 +61,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         }
     }
 
-    private void processBeanDefinition(Element ele) throws BeanCreateException {
+    private void processBeanDefinition(Element ele) throws BeanException {
         String name = ele.getAttribute("name");
         System.out.println(name);
         String className = ele.getAttribute("class");
@@ -83,6 +83,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                 beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
             }
         }
-
     }
+
+
 }

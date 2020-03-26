@@ -6,35 +6,35 @@ package com.myspring.mycontext.exception;
  * @DateTime 2020/1/20 3:02 下午
  * @Author yang
  */
-public class BeanCreateException extends Exception {
+public class BeanException extends Exception {
     private String errorCode;
     private String showeMessage;
     private Throwable cause;
 
-    public BeanCreateException() {
+    public BeanException() {
     }
 
-    public BeanCreateException(String errorMessage) {
+    public BeanException(String errorMessage) {
         super(errorMessage);
     }
 
-    public BeanCreateException(Throwable cause) {
+    public BeanException(Throwable cause) {
         super(cause);
         this.cause = cause;
     }
 
-    public BeanCreateException(String errorCode, String message) {
+    public BeanException(String errorCode, String message) {
         super(message);
         this.errorCode = errorCode;
     }
 
-    public BeanCreateException(String errorMessage, Throwable cause) {
+    public BeanException(String errorMessage, Throwable cause) {
         super(errorMessage, cause);
         this.cause = cause;
     }
 
 
-    public BeanCreateException(String errorCode, String errorMessage, Throwable cause) {
+    public BeanException(String errorCode, String errorMessage, Throwable cause) {
         super(errorMessage, cause);
         this.errorCode = errorCode;
         this.cause = cause;

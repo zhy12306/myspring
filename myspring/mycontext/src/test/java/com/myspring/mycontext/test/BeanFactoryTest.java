@@ -1,9 +1,6 @@
 package com.myspring.mycontext.test;
 
 import com.myspring.mycontext.BeanDefinition;
-import com.myspring.mycontext.PropertyValue;
-import com.myspring.mycontext.PropertyValues;
-import com.myspring.mycontext.exception.BeanCreateException;
 import com.myspring.mycontext.factory.AutowireCapableBeanFactory;
 import com.myspring.mycontext.factory.BeanFactory;
 import com.myspring.mycontext.io.ResourceLoader;

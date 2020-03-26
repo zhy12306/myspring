@@ -1,6 +1,9 @@
 package com.myspring.mycontext.factory;
 
 import com.myspring.mycontext.BeanDefinition;
+import com.myspring.mycontext.exception.BeanException;
+import com.myspring.mycontext.exception.BeanFoundErrorCode;
+import com.myspring.mycontext.exception.BeanNotFoundException;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -36,8 +39,17 @@ public abstract class AbstractBeanFactory implements BeanFactory {
      * @Author yang
      * @Date 2020/1/20
      */
-    public Object getBean(String name) {
-        return beanDefinitionMap.get(name).getBean();
+    public Object getBean(String name) throws BeanException {
+        BeanDefinition beanDefinition = beanDefinitionMap.get(name);
+        if (beanDefinition==null){
+            throw new BeanNotFoundException(name);
+        }
+        Object bean = beanDefinition.getBean();
+        if (bean==null){
+            bean = doCreateBean(beanDefinition);
+        }
+        return bean;
+
     }
 
     /**

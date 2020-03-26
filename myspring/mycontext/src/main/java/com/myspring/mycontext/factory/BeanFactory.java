@@ -1,6 +1,7 @@
 package com.myspring.mycontext.factory;
 
 import com.myspring.mycontext.BeanDefinition;
+import com.myspring.mycontext.exception.BeanException;
 
 /**
  * @ClassName BeanFactory
@@ -21,5 +22,5 @@ public interface BeanFactory {
      * @Author yang
      * @Date   2020/1/20
     */
-     Object getBean(String name);
+     Object getBean(String name) throws BeanException;
 }

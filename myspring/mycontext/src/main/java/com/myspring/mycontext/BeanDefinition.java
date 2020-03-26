@@ -1,7 +1,7 @@
 package com.myspring.mycontext;
 
 import com.myspring.mycontext.exception.BeanCreateErrorCode;
-import com.myspring.mycontext.exception.BeanCreateException;
+import com.myspring.mycontext.exception.BeanException;
 
 /**
  * @ClassName BeanDefinition
@@ -48,15 +48,15 @@ public class BeanDefinition {
      * @Author yang
      * @Date 2020/1/21 3:46 下午
      */
-    public BeanDefinition setBeanClassName(String beanClassName) throws BeanCreateException {
+    public BeanDefinition setBeanClassName(String beanClassName) throws BeanException {
         if (beanClassName == null || beanClassName.trim().length() == 0) {
-            throw new BeanCreateException(BeanCreateErrorCode.BC001.getErrorCode(), BeanCreateErrorCode.BC001.getErrorMessage() + beanClassName + "失败！");
+            throw new BeanException(BeanCreateErrorCode.BC001.getErrorCode(), BeanCreateErrorCode.BC001.getErrorMessage() + beanClassName + "失败！");
         }
         this.beanClassName = beanClassName;
         try {
             this.beanClass = Class.forName(beanClassName);
         } catch (ClassNotFoundException e) {
-            throw new BeanCreateException(BeanCreateErrorCode.BC002.getErrorCode(), BeanCreateErrorCode.BC002.getErrorMessage() + beanClassName + "失败！", e);
+            throw new BeanException(BeanCreateErrorCode.BC002.getErrorCode(), BeanCreateErrorCode.BC002.getErrorMessage() + beanClassName + "失败！", e);
         }
         return this;
     }
