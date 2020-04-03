@@ -1,10 +1,10 @@
-package com.myspring.mycontext.xml;
+package com.myspring.mycontext.bean.xml;
 
-import com.myspring.mycontext.AbstractBeanDefinitionReader;
-import com.myspring.mycontext.BeanDefinition;
-import com.myspring.mycontext.PropertyValue;
-import com.myspring.mycontext.exception.BeanException;
-import com.myspring.mycontext.io.ResourceLoader;
+import com.myspring.mycontext.bean.AbstractBeanDefinitionReader;
+import com.myspring.mycontext.bean.BeanDefinition;
+import com.myspring.mycontext.bean.PropertyValue;
+import com.myspring.mycontext.exception.beanexception.BeanException;
+import com.myspring.mycontext.bean.io.ResourceLoader;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -25,12 +25,12 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
     }
 
     @Override
-    public void loadBeanDefinition(String location) throws Exception {
+    public void loadBeanDefinitions(String location) throws Exception {
         InputStream inputStream = getResourceLoader().getResource(location).getInputStream();
-        doLoadBeanfinition(inputStream);
+        doLoadBeanfinitions(inputStream);
     }
 
-    protected void doLoadBeanfinition(InputStream inputStream) throws Exception {
+    protected void doLoadBeanfinitions(InputStream inputStream) throws Exception {
         try {
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();

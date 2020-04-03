@@ -1,4 +1,4 @@
-package com.myspring.mycontext;
+package com.myspring.mycontext.bean;
 
 /**
  * 用于bean的属性注入

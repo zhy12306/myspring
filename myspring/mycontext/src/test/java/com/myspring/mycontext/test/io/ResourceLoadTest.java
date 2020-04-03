@@ -1,7 +1,7 @@
 package com.myspring.mycontext.test.io;
 
-import com.myspring.mycontext.io.Resource;
-import com.myspring.mycontext.io.ResourceLoader;
+import com.myspring.mycontext.bean.io.Resource;
+import com.myspring.mycontext.bean.io.ResourceLoader;
 import org.junit.Assert;
 import org.junit.Test;
 

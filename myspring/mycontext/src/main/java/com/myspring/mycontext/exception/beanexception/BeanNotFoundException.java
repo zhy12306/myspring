@@ -1,4 +1,6 @@
-package com.myspring.mycontext.exception;
+package com.myspring.mycontext.exception.beanexception;
+
+import com.myspring.mycontext.exception.beanexception.errorcode.BeanFoundErrorCode;
 
 /**
  * @DateTime 2020/3/26 9:31 下午

@@ -1,4 +1,4 @@
-package com.myspring.mycontext;
+package com.myspring.mycontext.bean;
 
 import java.io.IOException;
 
@@ -7,5 +7,5 @@ import java.io.IOException;
  * @Author yang
  */
 public interface BeanDefinitionReader {
-    void loadBeanDefinition(String location) throws Exception;
+    void loadBeanDefinitions(String location) throws Exception;
 }

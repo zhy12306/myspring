@@ -1,4 +1,4 @@
-package com.myspring.mycontext.exception;
+package com.myspring.mycontext.exception.beanexception.errorcode;
 
 /**
  * @DateTime 2020/3/26 9:03 下午

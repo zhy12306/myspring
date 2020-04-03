@@ -1,9 +1,9 @@
-package com.myspring.mycontext.factory;
+package com.myspring.mycontext.bean.factory;
 
-import com.myspring.mycontext.BeanDefinition;
+import com.myspring.mycontext.bean.BeanDefinition;
 import com.myspring.mycontext.BeanReference;
-import com.myspring.mycontext.PropertyValue;
-import com.myspring.mycontext.exception.BeanCreateErrorCode;
+import com.myspring.mycontext.bean.PropertyValue;
+import com.myspring.mycontext.exception.beanexception.errorcode.BeanCreateErrorCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

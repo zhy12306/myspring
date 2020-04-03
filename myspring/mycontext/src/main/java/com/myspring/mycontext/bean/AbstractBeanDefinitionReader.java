@@ -1,6 +1,6 @@
-package com.myspring.mycontext;
+package com.myspring.mycontext.bean;
 
-import com.myspring.mycontext.io.ResourceLoader;
+import com.myspring.mycontext.bean.io.ResourceLoader;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Map;
  * @DateTime 2020/1/21 4:43 下午
  * @Author yang
  */
-public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader{
+public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader {
     private Map<String, BeanDefinition> registry;
     private ResourceLoader resourceLoader;
 

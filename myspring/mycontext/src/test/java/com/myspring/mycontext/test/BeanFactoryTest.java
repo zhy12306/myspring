@@ -1,10 +1,11 @@
 package com.myspring.mycontext.test;
 
-import com.myspring.mycontext.BeanDefinition;
-import com.myspring.mycontext.factory.AutowireCapableBeanFactory;
-import com.myspring.mycontext.factory.BeanFactory;
-import com.myspring.mycontext.io.ResourceLoader;
-import com.myspring.mycontext.xml.XmlBeanDefinitionReader;
+import com.myspring.mycontext.bean.BeanDefinition;
+import com.myspring.mycontext.bean.factory.AbstractBeanFactory;
+import com.myspring.mycontext.bean.factory.AutowireCapableBeanFactory;
+import com.myspring.mycontext.bean.factory.BeanFactory;
+import com.myspring.mycontext.bean.io.ResourceLoader;
+import com.myspring.mycontext.bean.xml.XmlBeanDefinitionReader;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -42,18 +43,42 @@ public class BeanFactoryTest {
      * @Date 2020/1/19
      */
     public void test() throws Exception {
-        //1.注册bean对象
+        //1.读取bean  xml配置
         XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(new ResourceLoader());
-        xmlBeanDefinitionReader.loadBeanDefinition("myspringcontextIOC.xml");
-        Set<Map.Entry<String, BeanDefinition>> beanSet = xmlBeanDefinitionReader.getRegistry().entrySet();
-        for (Map.Entry<String, BeanDefinition> beanDefinitionEntry : beanSet) {
-            String key = beanDefinitionEntry.getKey();
-            BeanDefinition beanDefinition = beanDefinitionEntry.getValue();
-            beanFactory.registryBeanDefinition(key, beanDefinition);
+        xmlBeanDefinitionReader.loadBeanDefinitions("myspringcontextIOC.xml");
+
+        //2初始化beanfactory，并注入bean
+        AutowireCapableBeanFactory beanFactory = new AutowireCapableBeanFactory();
+        for (Map.Entry<String, BeanDefinition> beanDefinitionEntry : xmlBeanDefinitionReader.getRegistry().entrySet()) {
+            beanFactory.registerBeanDefinition(beanDefinitionEntry.getKey(), beanDefinitionEntry.getValue());
         }
-        //2.获取bean对象
+
+        //3.获取bean对象
         HelloWorld helloWorld = (HelloWorld) beanFactory.getBean("helloWorld");
         //3.对象调用对象方法
         helloWorld.sayHello();
     }
+
+    @Test
+    public void testPreInstantiate() throws Exception {
+        // 1.读取配置
+        XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(new ResourceLoader());
+        xmlBeanDefinitionReader.loadBeanDefinitions("myspringcontextIOC.xml");
+
+        // 2.初始化BeanFactory并注册bean
+        AbstractBeanFactory beanFactory = new AutowireCapableBeanFactory();
+        for (Map.Entry<String, BeanDefinition> beanDefinitionEntry : xmlBeanDefinitionReader.getRegistry().entrySet()) {
+            beanFactory.registerBeanDefinition(beanDefinitionEntry.getKey(), beanDefinitionEntry.getValue());
+        }
+
+        // 3.初始化bean
+        beanFactory.preInstantiateSingleLetons();
+
+        // 4.获取bean
+        HelloWorld helloWorld = (HelloWorld) beanFactory.getBean("helloWorld");
+        //5.对象调用对象方法
+        helloWorld.sayHello();
+    }
+
+
 }

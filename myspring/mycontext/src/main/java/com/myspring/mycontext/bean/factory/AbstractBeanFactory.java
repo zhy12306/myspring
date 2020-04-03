@@ -1,10 +1,12 @@
-package com.myspring.mycontext.factory;
+package com.myspring.mycontext.bean.factory;
 
-import com.myspring.mycontext.BeanDefinition;
-import com.myspring.mycontext.exception.BeanException;
-import com.myspring.mycontext.exception.BeanFoundErrorCode;
-import com.myspring.mycontext.exception.BeanNotFoundException;
+import com.myspring.mycontext.bean.BeanDefinition;
+import com.myspring.mycontext.exception.beanexception.BeanException;
+import com.myspring.mycontext.exception.beanexception.BeanNotFoundException;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -16,8 +18,8 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public abstract class AbstractBeanFactory implements BeanFactory {
     private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
+    private final List<String> beanDdefinitionName = new ArrayList<>();
 
-    @Override
     /**
      * @Desc 将对象注册到beanfactory中
      * @Param [name, beanDefinition]
@@ -25,10 +27,18 @@ public abstract class AbstractBeanFactory implements BeanFactory {
      * @Author yang
      * @Date 2020/1/20
      */
-    public void registryBeanDefinition(String name, BeanDefinition beanDefinition) {
+    public void registerBeanDefinition(String name, BeanDefinition beanDefinition) {
         Object bean = doCreateBean(beanDefinition);
         beanDefinition.setBean(bean);
         beanDefinitionMap.put(name, beanDefinition);
+        beanDdefinitionName.add(name);
+    }
+
+    public void preInstantiateSingleLetons() throws BeanException {
+        for (Iterator<String> iterator = this.beanDdefinitionName.iterator(); iterator.hasNext(); ) {
+            String beanName = iterator.next();
+            getBean(beanName);
+        }
     }
 
     @Override
@@ -41,11 +51,11 @@ public abstract class AbstractBeanFactory implements BeanFactory {
      */
     public Object getBean(String name) throws BeanException {
         BeanDefinition beanDefinition = beanDefinitionMap.get(name);
-        if (beanDefinition==null){
+        if (beanDefinition == null) {
             throw new BeanNotFoundException(name);
         }
         Object bean = beanDefinition.getBean();
-        if (bean==null){
+        if (bean == null) {
             bean = doCreateBean(beanDefinition);
         }
         return bean;
@@ -53,10 +63,10 @@ public abstract class AbstractBeanFactory implements BeanFactory {
     }
 
     /**
-     * @Desc   初始化bean
+     * @Desc 初始化bean
      * @Author yang
-     * @Date   2020/1/20
-    */
+     * @Date 2020/1/20
+     */
     protected abstract Object doCreateBean(BeanDefinition beanDefinition);
 
 }

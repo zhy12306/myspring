@@ -1,7 +1,7 @@
-package com.myspring.mycontext;
+package com.myspring.mycontext.bean;
 
-import com.myspring.mycontext.exception.BeanCreateErrorCode;
-import com.myspring.mycontext.exception.BeanException;
+import com.myspring.mycontext.exception.beanexception.errorcode.BeanCreateErrorCode;
+import com.myspring.mycontext.exception.beanexception.BeanException;
 
 /**
  * @ClassName BeanDefinition
@@ -44,7 +44,7 @@ public class BeanDefinition {
     /**
      * @Desc 设置 bean 的 classname
      * @Param [beanClassName]
-     * @Return com.myspring.mycontext.BeanDefinition
+     * @Return com.myspring.mycontext.bean.BeanDefinition
      * @Author yang
      * @Date 2020/1/21 3:46 下午
      */

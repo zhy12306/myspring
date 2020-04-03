@@ -1,4 +1,4 @@
-package com.myspring.mycontext;
+package com.myspring.mycontext.bean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class PropertyValues {
     /**
      * @Desc 添加属性值
      * @Param [propertyValue]
-     * @Return com.myspring.mycontext.PropertyValues
+     * @Return com.myspring.mycontext.bean.PropertyValues
      * @Author yang
      * @Date 2020/1/21
      */
@@ -32,7 +32,7 @@ public class PropertyValues {
     /**
      * @Desc 获取属性值
      * @Param []
-     * @Return java.util.List<com.myspring.mycontext.PropertyValue>
+     * @Return java.util.List<com.myspring.mycontext.bean.PropertyValue>
      * @Author yang
      * @Date 2020/1/21
      */

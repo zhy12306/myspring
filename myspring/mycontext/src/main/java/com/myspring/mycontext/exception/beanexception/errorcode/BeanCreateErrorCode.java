@@ -1,4 +1,4 @@
-package com.myspring.mycontext.exception;
+package com.myspring.mycontext.exception.beanexception.errorcode;
 
 /**
  * @className BeanCreateErrorCode
