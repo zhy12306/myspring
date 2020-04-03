@@ -2,7 +2,6 @@ package com.myspring.mycontext.test.io;
 
 import com.myspring.mycontext.io.Resource;
 import com.myspring.mycontext.io.ResourceLoader;
-import com.sun.source.tree.AssertTree;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,7 +14,7 @@ import java.io.InputStream;
  */
 public class ResourceLoadTest {
     @Test
-    public  void testIO() throws IOException {
+    public void testIO() throws IOException {
         ResourceLoader resourceLoader = new ResourceLoader();
         Resource resource = resourceLoader.getResource("myspringcontextIOC.xml");
         InputStream inputStream = resource.getInputStream();

@@ -6,13 +6,11 @@ package com.myspring.mycontext;
  */
 public class BeanReference {
     private String name;
+    private Object bean;
 
     public BeanReference(String name) {
         this.name = name;
     }
-
-    private
-    Object bean;
 
     public String getName() {
         return name;

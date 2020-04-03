@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="添加通过读取 xml 配置，实现 bean 属性注入">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/io/ResourceLoadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/io/ResourceLoadTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +65,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tinySpring" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,7 +75,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -205,6 +207,9 @@
       <workItem from="1585212834737" duration="10536000" />
       <workItem from="1585471423237" duration="1759000" />
       <workItem from="1585552253254" duration="316000" />
+      <workItem from="1585552586120" duration="1959000" />
+      <workItem from="1585742920606" duration="4114000" />
+      <workItem from="1585816841181" duration="6108000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1579487943161</created>
@@ -269,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580107372301</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="修改pom文件，解决引用maven插件报错">
+      <created>1585552844021</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585552844021</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +322,8 @@
     <MESSAGE value="添加 AutowireBeanfactory，实现 自动根据对象类 class、类名自动创建bean对象。" />
     <MESSAGE value="添加 PropertyValue，在创建 bean 对象时实现属性注入" />
     <MESSAGE value="添加通过读取 xml 配置，实现 bean 属性注入" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加通过读取 xml 配置，实现 bean 属性注入" />
+    <MESSAGE value="修改pom文件，解决引用maven插件报错" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改pom文件，解决引用maven插件报错" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -331,11 +344,6 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/io/ResourceLoadTest.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValues.java</url>
           <line>27</line>
           <option name="timeStamp" value="7" />
@@ -347,5 +355,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/myspring$BeanFactoryTest_test.ic" NAME="BeanFactoryTest.test Coverage Results" MODIFIED="1585553202643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.myspring.mycontext.test.*</FILTER>
+    </SUITE>
   </component>
 </project>
