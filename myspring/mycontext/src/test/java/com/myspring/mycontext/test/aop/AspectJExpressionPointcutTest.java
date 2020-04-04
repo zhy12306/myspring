@@ -29,7 +29,6 @@ public class AspectJExpressionPointcutTest {
         aspectJExpressionPointCut.setExpression(expression);
         boolean sayHello = aspectJExpressionPointCut.getMethodMatcher().matches(HelloWorld.class.getDeclaredMethod("sayHello"), HelloWorld.class);
         Assert.assertTrue(sayHello);
-
     }
 
 }

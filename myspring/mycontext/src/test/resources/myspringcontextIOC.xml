@@ -12,5 +12,10 @@
         <property name="whatUWannaSay" value="U are so beautiful!!"></property>
         <property name="reason" value="how beautiful U are!!"></property>
     </bean>
-
+    <bean id="timeInterceptor" class="com.myspring.mycontext.test.aop.TimerInterceptor"></bean>
+    <bean id="autoProxyCreator" class="com.myspring.mycontext.aop.AspectJAutowareAdvisorAutoProxyCreator"></bean>
+    <bean id="aspectJAspect" class="com.myspring.mycontext.aop.AspectJExpressionPointcutAdvisor">
+        <property name="advice" ref="timeInterceptor"></property>
+        <property name="pointCut" value="execution(* com.myspring.mycontext.test.*.*(..))"></property>
+    </bean>
 </beans>
