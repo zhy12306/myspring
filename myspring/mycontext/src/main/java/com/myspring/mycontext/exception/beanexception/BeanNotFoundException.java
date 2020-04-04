@@ -8,7 +8,7 @@ import com.myspring.mycontext.exception.beanexception.errorcode.BeanFoundErrorCo
  */
 public class BeanNotFoundException extends BeanException {
     public BeanNotFoundException(String beanName) {
-        super(BeanFoundErrorCode.BF001.getErrorCode(), BeanFoundErrorCode.BF001.getErrorMessage() + beanName + "is defined !");
+        super(BeanFoundErrorCode.BF001.getErrorCode(), BeanFoundErrorCode.BF001.getErrorMessage() + beanName + " is defined !");
     }
 
 }

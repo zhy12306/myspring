@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="实现由bean注入bean">
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/context/AbstractApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/context/ApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/context/ClassPathXmlApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/context/ApplicationContextTest.java" afterDir="false" />
+    <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AdvicedSupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AopProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/JdkDynamicProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/ReflectiveMethodInvocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/TargetSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorldService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/JdkDynamicProxyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/TimerInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/AbstractBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/AbstractBeanDefinitionReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/BeanDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/BeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/BeanDefinitionReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/PropertyValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/PropertyValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/BeanCreateErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/errorcode/BeanCreateErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/BeanException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/BeanException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/BeanFoundErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/errorcode/BeanFoundErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/BeanNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/BeanNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/factory/AbstractBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/factory/AutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/factory/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/factory/BeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/io/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/io/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/io/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/io/ResourceLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/io/UrlResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/io/UrlResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/xml/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/xml/XmlBeanDefinitionReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/BeanFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/BeanFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/io/ResourceLoadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/io/ResourceLoadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/BeanException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/BeanException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/BeanNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/BeanNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorld.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +35,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="myspring" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -98,6 +91,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.myspring.mycontext.aop" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mycontext/src/test" />
     </key>
@@ -114,7 +110,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationContextTest.test">
+  <component name="RunManager" selected="JUnit.JdkDynamicProxyTest.test">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="myspring" />
       <working_directory value="$PROJECT_DIR$" />
@@ -146,21 +142,6 @@
       <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.context.ApplicationContextTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BeanFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mycontext" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myspring.mycontext.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.myspring.mycontext.test" />
-      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.BeanFactoryTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -197,6 +178,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JdkDynamicProxyTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mycontext" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myspring.mycontext.test.aop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.myspring.mycontext.test.aop" />
+      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.aop.JdkDynamicProxyTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ResourceLoadTest.testIO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mycontext" />
       <extension name="coverage">
@@ -215,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JdkDynamicProxyTest.test" />
         <item itemvalue="JUnit.ApplicationContextTest.test" />
         <item itemvalue="JUnit.BeanFactoryTest.testPreInstantiate" />
         <item itemvalue="JUnit.BeanFactoryTest.test" />
         <item itemvalue="JUnit.ResourceLoadTest.testIO" />
-        <item itemvalue="JUnit.BeanFactoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +262,9 @@
       <workItem from="1585742920606" duration="4114000" />
       <workItem from="1585816841181" duration="6838000" />
       <workItem from="1585896147932" duration="597000" />
-      <workItem from="1585896761937" duration="4648000" />
+      <workItem from="1585896761937" duration="6699000" />
+      <workItem from="1585904951798" duration="4864000" />
+      <workItem from="1585981430844" duration="678000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1579487943161</created>
@@ -344,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585895493073</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="使用ApplicationContext实现bean注入">
+      <created>1585901490034</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585901490034</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +393,8 @@
     <MESSAGE value="添加通过读取 xml 配置，实现 bean 属性注入" />
     <MESSAGE value="修改pom文件，解决引用maven插件报错" />
     <MESSAGE value="实现由bean注入bean" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现由bean注入bean" />
+    <MESSAGE value="使用ApplicationContext实现bean注入" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用ApplicationContext实现bean注入" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -411,6 +418,11 @@
           <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/PropertyValues.java</url>
           <line>27</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/JdkDynamicProxyTest.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -6,7 +6,7 @@ package com.myspring.mycontext.test;
  * @DateTime 2020/1/19 9:07 下午
  * @Author yang
  */
-public class HelloWorld {
+public class HelloWorld  implements HelloWorldService{
     private String whatUWannaSay;
     private  String reason;
 

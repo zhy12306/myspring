@@ -6,7 +6,7 @@ package com.myspring.mycontext.exception.beanexception;
  * @DateTime 2020/1/20 3:02 下午
  * @Author yang
  */
-public abstract class BeanException extends Exception {
+public  class BeanException extends Exception {
     private String errorCode;
     private String showeMessage;
     private Throwable cause;
