@@ -8,15 +8,15 @@ import org.aopalliance.aop.Advice;
  * @Date: 2020/4/4 14:50
  * @Version: V1.0.0
  */
-public class AspectJExpressionPointCutAdvisor implements PointcutAdvisor {
-    private AspectJExpressionPointCut pointCut = new AspectJExpressionPointCut();
+public class AspectJExpressionPointcutAdvisor implements PointcutAdvisor {
+    private AspectJExpressionPointcut pointCut = new AspectJExpressionPointcut();
     private Advice advice;
 
-    public AspectJExpressionPointCut getPointCut() {
+    public AspectJExpressionPointcut getPointCut() {
         return pointCut;
     }
 
-    public void setPointCut(AspectJExpressionPointCut pointCut) {
+    public void setPointCut(AspectJExpressionPointcut pointCut) {
         this.pointCut = pointCut;
     }
 

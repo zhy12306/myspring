@@ -14,5 +14,5 @@ public interface BeanFactory {
      * @Author yang
      * @Date 2020/1/20
      */
-    Object getBean(String name) throws BeanException;
+    Object getBean(String name) throws Exception;
 }

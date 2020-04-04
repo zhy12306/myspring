@@ -7,27 +7,19 @@ package com.myspring.mycontext.aop;
  * @Version: V1.0.0
  */
 public class TargetSource {
-    private Class targetClass;
+    private Class<?>[] targetClass;
     private Object target;
 
-    public TargetSource(Class targetClass, Object target) {
-        this.targetClass = targetClass;
+    public TargetSource(Object target, Class<?>... targetClass) {
         this.target = target;
-    }
-
-    public Class getTargetClass() {
-        return targetClass;
-    }
-
-    public void setTargetClass(Class targetClass) {
         this.targetClass = targetClass;
+    }
+
+    public Class<?>[] getTargetClass() {
+        return targetClass;
     }
 
     public Object getTarget() {
         return target;
-    }
-
-    public void setTarget(Object target) {
-        this.target = target;
     }
 }

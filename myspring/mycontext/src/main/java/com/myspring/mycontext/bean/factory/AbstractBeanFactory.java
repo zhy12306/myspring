@@ -1,7 +1,7 @@
 package com.myspring.mycontext.bean.factory;
 
 import com.myspring.mycontext.bean.BeanDefinition;
-import com.myspring.mycontext.exception.beanexception.BeanException;
+import com.myspring.mycontext.bean.BeanPostProcessor;
 import com.myspring.mycontext.exception.beanexception.BeanNotFoundException;
 
 import java.util.ArrayList;
@@ -18,7 +18,8 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public abstract class AbstractBeanFactory implements BeanFactory {
     private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
-    private final List<String> beanDdefinitionName = new ArrayList<>();
+    private final List<String> beanDefinitionNames = new ArrayList<>();
+    private List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
 
     /**
      * @Desc 将对象注册到beanfactory中
@@ -28,14 +29,20 @@ public abstract class AbstractBeanFactory implements BeanFactory {
      * @Date 2020/1/20
      */
     public void registerBeanDefinition(String name, BeanDefinition beanDefinition) {
-        Object bean = doCreateBean(beanDefinition);
-        beanDefinition.setBean(bean);
         beanDefinitionMap.put(name, beanDefinition);
-        beanDdefinitionName.add(name);
+        beanDefinitionNames.add(name);
     }
 
-    public void preInstantiateSingleLetons() throws BeanException {
-        for (Iterator<String> iterator = this.beanDdefinitionName.iterator(); iterator.hasNext(); ) {
+
+    /**
+     * @Description: 创建单例
+     * @Param: []
+     * @return: void
+     * @Author: YANG
+     * @Date: 2020/4/4 19:45
+     **/
+    public void preInstantiateSingleLetons() throws Exception {
+        for (Iterator<String> iterator = this.beanDefinitionNames.iterator(); iterator.hasNext(); ) {
             String beanName = iterator.next();
             getBean(beanName);
         }
@@ -49,7 +56,7 @@ public abstract class AbstractBeanFactory implements BeanFactory {
      * @Author yang
      * @Date 2020/1/20
      */
-    public Object getBean(String name) throws BeanException {
+    public Object getBean(String name) throws Exception {
         BeanDefinition beanDefinition = beanDefinitionMap.get(name);
         if (beanDefinition == null) {
             throw new BeanNotFoundException(name);
@@ -62,11 +69,48 @@ public abstract class AbstractBeanFactory implements BeanFactory {
 
     }
 
+    public Object initializeBean(Object bean, String name) throws Exception {
+        for (BeanPostProcessor beanPostProcessor : beanPostProcessors) {
+            bean = beanPostProcessor.postProcessBeforeInitialization(bean, name);
+        }
+        //TODO:call initialize method
+        for (BeanPostProcessor beanPostProcessor : beanPostProcessors) {
+            bean = beanPostProcessor.postProcessAfterInitialization(bean, name);
+        }
+        return bean;
+    }
+
+    protected Object createBeanInstance(BeanDefinition beanDefinition) throws Exception {
+        return beanDefinition.getBeanClass().newInstance();
+    }
+
+
     /**
      * @Desc 初始化bean
      * @Author yang
      * @Date 2020/1/20
      */
-    protected abstract Object doCreateBean(BeanDefinition beanDefinition);
+    protected Object doCreateBean(BeanDefinition beanDefinition) throws Exception {
+        Object bean = createBeanInstance(beanDefinition);
+        beanDefinition.setBean(bean);
+        applyPropertyValues(bean, beanDefinition);
+        return bean;
+    }
 
+    protected void applyPropertyValues(Object bean, BeanDefinition beanDefinition) throws Exception {
+    }
+
+    public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor) {
+        this.beanPostProcessors.add(beanPostProcessor);
+    }
+
+    public List getBeanByType(Class type) throws Exception {
+        List beans = new ArrayList<>();
+        for (String beanDefinitionName : beanDefinitionNames) {
+            if (type.isAssignableFrom(beanDefinitionMap.get(beanDefinitionName).getBeanClass())) {
+                beans.add(getBean(beanDefinitionName));
+            }
+        }
+        return beans;
+    }
 }

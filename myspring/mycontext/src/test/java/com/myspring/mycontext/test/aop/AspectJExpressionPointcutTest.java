@@ -1,6 +1,6 @@
 package com.myspring.mycontext.test.aop;
 
-import com.myspring.mycontext.aop.AspectJExpressionPointCut;
+import com.myspring.mycontext.aop.AspectJExpressionPointcut;
 import com.myspring.mycontext.test.HelloWorld;
 import com.myspring.mycontext.test.HelloWorldService;
 import org.junit.Assert;
@@ -16,7 +16,7 @@ public class AspectJExpressionPointcutTest {
     @Test
     public void testClassFilter() {
         String expression = "execution(* com.myspring.mycontext.test.*.*(..)) ";
-        AspectJExpressionPointCut aspectJExpressionPointCut = new AspectJExpressionPointCut();
+        AspectJExpressionPointcut aspectJExpressionPointCut = new AspectJExpressionPointcut();
         aspectJExpressionPointCut.setExpression(expression);
         boolean matches = aspectJExpressionPointCut.getClassFilter().matches(HelloWorldService.class);
         Assert.assertTrue(matches);
@@ -25,7 +25,7 @@ public class AspectJExpressionPointcutTest {
     @Test
     public void testMethodInterceptor() throws NoSuchMethodException {
         String expression = "execution(* com.myspring.mycontext.test.*.*(..)) ";
-        AspectJExpressionPointCut aspectJExpressionPointCut = new AspectJExpressionPointCut();
+        AspectJExpressionPointcut aspectJExpressionPointCut = new AspectJExpressionPointcut();
         aspectJExpressionPointCut.setExpression(expression);
         boolean sayHello = aspectJExpressionPointCut.getMethodMatcher().matches(HelloWorld.class.getDeclaredMethod("sayHello"), HelloWorld.class);
         Assert.assertTrue(sayHello);

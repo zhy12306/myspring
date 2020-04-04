@@ -15,7 +15,7 @@ import java.util.Set;
  * @Date: 2020/4/4 14:42
  * @Version: V1.0.0
  */
-public class AspectJExpressionPointCut implements Pointcut, ClassFilter, MethodMatcher {
+public class AspectJExpressionPointcut implements Pointcut, ClassFilter, MethodMatcher {
     private PointcutParser pointcutParser;
     private String expression;
     private PointcutExpression pointcutExpression;
@@ -34,11 +34,11 @@ public class AspectJExpressionPointCut implements Pointcut, ClassFilter, MethodM
         DEFAULT_SUPPORTED_PRIMITIVES.add(PointcutPrimitive.AT_ARGS);
     }
 
-    public AspectJExpressionPointCut() {
+    public AspectJExpressionPointcut() {
         this(DEFAULT_SUPPORTED_PRIMITIVES);
     }
 
-    public AspectJExpressionPointCut(Set<PointcutPrimitive> supportedPrimitives) {
+    public AspectJExpressionPointcut(Set<PointcutPrimitive> supportedPrimitives) {
         pointcutParser = PointcutParser.getPointcutParserSupportingSpecifiedPrimitivesAndUsingContextClassloaderForResolution(supportedPrimitives);
     }
 
