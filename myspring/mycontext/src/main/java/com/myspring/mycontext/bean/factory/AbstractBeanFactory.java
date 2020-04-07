@@ -64,12 +64,14 @@ public abstract class AbstractBeanFactory implements BeanFactory {
         Object bean = beanDefinition.getBean();
         if (bean == null) {
             bean = doCreateBean(beanDefinition);
+            bean=initializeBean(bean,name);
+            beanDefinition.setBean(bean);
         }
         return bean;
 
     }
 
-    public Object initializeBean(Object bean, String name) throws Exception {
+    protected Object initializeBean(Object bean, String name) throws Exception {
         for (BeanPostProcessor beanPostProcessor : beanPostProcessors) {
             bean = beanPostProcessor.postProcessBeforeInitialization(bean, name);
         }

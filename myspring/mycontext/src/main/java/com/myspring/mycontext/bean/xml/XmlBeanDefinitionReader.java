@@ -1,8 +1,10 @@
 package com.myspring.mycontext.bean.xml;
 
+import com.myspring.mycontext.BeanReference;
 import com.myspring.mycontext.bean.AbstractBeanDefinitionReader;
 import com.myspring.mycontext.bean.BeanDefinition;
 import com.myspring.mycontext.bean.PropertyValue;
+import com.myspring.mycontext.exception.beanexception.BeanCreateExeception;
 import com.myspring.mycontext.exception.beanexception.BeanException;
 import com.myspring.mycontext.bean.io.ResourceLoader;
 import org.w3c.dom.Document;
@@ -36,8 +38,6 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document document = documentBuilder.parse(inputStream);
             registerBeanDefinition(document);
-        } catch (Exception e) {
-            e.printStackTrace();
         } finally {
             if (inputStream != null) {
                 inputStream.close();
@@ -45,12 +45,12 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         }
     }
 
-    protected void registerBeanDefinition(Document document) throws BeanException {
+    protected void registerBeanDefinition(Document document) {
         Element root = document.getDocumentElement();
         processBeanDefinitions(root);
     }
 
-    private void processBeanDefinitions(Element root) throws BeanException {
+    private void processBeanDefinitions(Element root) {
         NodeList childNodes = root.getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
             Node item = childNodes.item(i);
@@ -61,26 +61,35 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         }
     }
 
-    private void processBeanDefinition(Element ele) throws BeanException {
-        String name = ele.getAttribute("name");
-        System.out.println(name);
+    private void processBeanDefinition(Element ele) {
+        String name = ele.getAttribute("id");
         String className = ele.getAttribute("class");
-        System.out.println(className);
         BeanDefinition beanDefinition = new BeanDefinition();
         processProperties(ele, beanDefinition);
         beanDefinition.setBeanClassName(className);
-        getRegistry().put(name,beanDefinition);
+        getRegistry().put(name, beanDefinition);
     }
 
     private void processProperties(Element ele, BeanDefinition beanDefinition) {
         NodeList propertyList = ele.getElementsByTagName("property");
         for (int i = 0; i < propertyList.getLength(); i++) {
-            Node item = propertyList.item(i);
-            if (item instanceof Element) {
-                Element propertyEle = (Element) item;
+            Node node = propertyList.item(i);
+            if (node instanceof Element) {
+                Element propertyEle = (Element) node;
                 String name = propertyEle.getAttribute("name");
                 String value = propertyEle.getAttribute("value");
-                beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                if (value != null && value.length() > 0) {
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                } else {
+                    String ref = propertyEle.getAttribute("ref");
+                    if (ref == null || ref.length() == 0) {
+                        throw new BeanCreateExeception(name);
+                    }
+                    BeanReference beanReference = new BeanReference(ref);
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, beanReference));
+                }
+
+
             }
         }
     }

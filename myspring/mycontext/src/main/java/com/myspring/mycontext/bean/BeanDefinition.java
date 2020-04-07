@@ -48,7 +48,7 @@ public class BeanDefinition {
      * @Author yang
      * @Date 2020/1/21 3:46 下午
      */
-    public BeanDefinition setBeanClassName(String beanClassName) throws BeanException {
+    public BeanDefinition setBeanClassName(String beanClassName)   {
         if (beanClassName == null || beanClassName.trim().length() == 0) {
             throw new BeanException(BeanCreateErrorCode.BC001.getErrorCode(), BeanCreateErrorCode.BC001.getErrorMessage() + beanClassName + "失败！");
         }

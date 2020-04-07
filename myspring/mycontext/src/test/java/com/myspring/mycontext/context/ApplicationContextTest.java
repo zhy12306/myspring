@@ -1,7 +1,6 @@
-package com.myspring.mycontext.test.context;
+package com.myspring.mycontext.context;
 
-import com.myspring.mycontext.context.ClassPathXmlApplicationContext;
-import com.myspring.mycontext.test.HelloWorld;
+import com.myspring.mycontext.HelloWorldServiceImp;
 import org.junit.Test;
 
 /**
@@ -14,7 +13,7 @@ public class ApplicationContextTest {
     @Test
     public void test() throws Exception {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("myspringcontextIOC.xml");
-        HelloWorld helloWorld = (HelloWorld) context.getBean("helloWorld");
+        HelloWorldServiceImp helloWorld = (HelloWorldServiceImp) context.getBean("helloWorld");
         helloWorld.sayHello();
 
     }

@@ -42,7 +42,7 @@ public class AspectJExpressionPointcut implements Pointcut, ClassFilter, MethodM
         pointcutParser = PointcutParser.getPointcutParserSupportingSpecifiedPrimitivesAndUsingContextClassloaderForResolution(supportedPrimitives);
     }
 
-    public void checkReadyToMatch() {
+    protected void checkReadyToMatch() {
         if (pointcutExpression == null) {
             pointcutExpression = buildPointcutExpression();
         }

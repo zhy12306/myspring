@@ -17,33 +17,33 @@ public class AspectJAutowareAdvisorAutoProxyCreator implements BeanFactoryAutowa
     private AbstractBeanFactory beanFactory;
 
     @Override
-    public void setBeanFactory(BeanFactory beanFactory) throws Exception {
-        this.beanFactory= (AbstractBeanFactory) beanFactory;
+    public void setBeanFactory(BeanFactory beanFactory) {
+        this.beanFactory = (AbstractBeanFactory) beanFactory;
     }
 
     @Override
-    public Object postProcessBeforeInitialization(Object bean, String beanName) throws Exception {
+    public Object postProcessBeforeInitialization(Object bean, String beanName) {
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws Exception {
-        if (bean instanceof AspectJExpressionPointcutAdvisor){
+        if (bean instanceof AspectJExpressionPointcutAdvisor) {
             return bean;
         }
-        if ( bean instanceof MethodInterceptor){
+        if (bean instanceof MethodInterceptor) {
             return bean;
         }
-        List<AspectJExpressionPointcutAdvisor> advisors=beanFactory.getBeanByType(AspectJExpressionPointcutAdvisor.class);
+        List<AspectJExpressionPointcutAdvisor> advisors = beanFactory.getBeanByType(AspectJExpressionPointcutAdvisor.class);
         for (AspectJExpressionPointcutAdvisor advisor : advisors) {
-            if (advisor.getPointCut().getClassFilter().matches(bean.getClass())){
-                AdvicedSupport advicedSupport = new AdvicedSupport();
-                advicedSupport.setMethodInterceptor((MethodInterceptor) advisor.getAdvice());
-                advicedSupport.setMethodMatcher(advisor.getPointCut().getMethodMatcher());
+            if (advisor.getPointcut().getClassFilter().matches(bean.getClass())) {
+                ProxyFactory proxyFactory = new ProxyFactory();
+                proxyFactory.setMethodInterceptor((MethodInterceptor) advisor.getAdvice());
+                proxyFactory.setMethodMatcher(advisor.getPointcut().getMethodMatcher());
 
-                TargetSource targetSource = new TargetSource(bean, bean.getClass().getInterfaces());
-                advicedSupport.setTargetSource(targetSource);
-                return  new JdkDynamicAopProxy(advicedSupport).getProxy();
+                TargetSource targetSource = new TargetSource(bean, bean.getClass(), bean.getClass().getInterfaces());
+                proxyFactory.setTargetSource(targetSource);
+                return proxyFactory.getProxy();
             }
         }
         return bean;

@@ -8,7 +8,7 @@ import org.aopalliance.intercept.MethodInterceptor;
  * @Date: 2020/4/3 16:59
  * @Version: V1.0.0
  */
-public class AdvicedSupport {
+public class AdvisedSupport {
     private TargetSource targetSource;
     private MethodInterceptor methodInterceptor;
     private MethodMatcher methodMatcher;

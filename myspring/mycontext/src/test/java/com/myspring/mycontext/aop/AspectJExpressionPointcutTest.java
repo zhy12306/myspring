@@ -1,8 +1,7 @@
-package com.myspring.mycontext.test.aop;
+package com.myspring.mycontext.aop;
 
-import com.myspring.mycontext.aop.AspectJExpressionPointcut;
-import com.myspring.mycontext.test.HelloWorld;
-import com.myspring.mycontext.test.HelloWorldService;
+import com.myspring.mycontext.HelloWorldServiceImp;
+import com.myspring.mycontext.HelloWorldService;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -27,7 +26,7 @@ public class AspectJExpressionPointcutTest {
         String expression = "execution(* com.myspring.mycontext.test.*.*(..)) ";
         AspectJExpressionPointcut aspectJExpressionPointCut = new AspectJExpressionPointcut();
         aspectJExpressionPointCut.setExpression(expression);
-        boolean sayHello = aspectJExpressionPointCut.getMethodMatcher().matches(HelloWorld.class.getDeclaredMethod("sayHello"), HelloWorld.class);
+        boolean sayHello = aspectJExpressionPointCut.getMethodMatcher().matches(HelloWorldServiceImp.class.getDeclaredMethod("sayHello"), HelloWorldServiceImp.class);
         Assert.assertTrue(sayHello);
     }
 

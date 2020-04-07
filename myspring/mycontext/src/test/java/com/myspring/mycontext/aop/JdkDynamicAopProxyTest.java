@@ -1,10 +1,8 @@
-package com.myspring.mycontext.test.aop;
+package com.myspring.mycontext.aop;
 
-import com.myspring.mycontext.aop.AdvicedSupport;
-import com.myspring.mycontext.aop.JdkDynamicAopProxy;
-import com.myspring.mycontext.aop.TargetSource;
+import com.myspring.mycontext.HelloWorldService;
+import com.myspring.mycontext.HelloWorldServiceImp;
 import com.myspring.mycontext.context.ClassPathXmlApplicationContext;
-import com.myspring.mycontext.test.HelloWorldService;
 import org.junit.Test;
 
 /**
@@ -18,24 +16,25 @@ public class JdkDynamicAopProxyTest {
     public void tset() throws Exception {
         // --------- helloWorldService without AOP
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("myspringcontextIOC.xml");
-        HelloWorldService helloWorld = (HelloWorldService) context.getBean("helloWorld");
+        HelloWorldService helloWorld = (HelloWorldService) context.getBean("helloWorldService");
         helloWorld.sayHello();
 
 
         // --------- helloWorldService with AOP
         //1.设置被代理对象（joinpoint）
-        AdvicedSupport advicedSupport = new AdvicedSupport();
-        TargetSource targetSource = new TargetSource(helloWorld, HelloWorldService.class);
+        AdvisedSupport advicedSupport = new AdvisedSupport();
+        TargetSource targetSource = new TargetSource(helloWorld, HelloWorldServiceImp.class,HelloWorldService.class);
         advicedSupport.setTargetSource(targetSource);
 
         //2.设置拦截起（advice）
-        TimerInterceptor timerInterceptor=new TimerInterceptor();
+        TimerInterceptor timerInterceptor = new TimerInterceptor();
         advicedSupport.setMethodInterceptor(timerInterceptor);
 
         //3.创建代理（proxy）
-        JdkDynamicAopProxy jdkDynamicAopProxy= new JdkDynamicAopProxy(advicedSupport);
-        HelloWorldService proxy = (HelloWorldService) jdkDynamicAopProxy.getProxy();
-        proxy.sayHello();
+        JdkDynamicAopProxy jdkDynamicAopProxy = new JdkDynamicAopProxy(advicedSupport);
+        Object proxy = jdkDynamicAopProxy.getProxy();
+        HelloWorldService helloWorldService = (HelloWorldService) proxy;
+        helloWorldService.sayHello();
 
     }
 }

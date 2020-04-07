@@ -9,7 +9,8 @@ package com.myspring.mycontext.exception.beanexception.errorcode;
 public enum BeanCreateErrorCode {
     BC001("BC0001", "类名格式错误，创建bean对象："),
     BC002("BC002", "类名解析失败，创建bean对象："),
-    BC003("BC003", "创建bean对象：");
+    BC003("BC003", "创建bean对象："),
+    BC004("BC004","Configuration problem: <property> element for property '");
 
     private String errorCode;
     private String errorMessage;

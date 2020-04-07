@@ -1,7 +1,5 @@
 package com.myspring.mycontext.aop;
 
-import org.aspectj.lang.reflect.AdviceSignature;
-
 /**
  * @Description: 抽象Aop工厂
  * @Author: YANG
@@ -9,9 +7,9 @@ import org.aspectj.lang.reflect.AdviceSignature;
  * @Version: V1.0.0
  */
 public abstract class AbstractAopFactory implements AopProxy {
-    protected AdvicedSupport advicedSupport;
+    protected AdvisedSupport advicedSupport;
 
-    public AbstractAopFactory(AdvicedSupport advicedSupport) {
+    public AbstractAopFactory(AdvisedSupport advicedSupport) {
         this.advicedSupport = advicedSupport;
     }
 }

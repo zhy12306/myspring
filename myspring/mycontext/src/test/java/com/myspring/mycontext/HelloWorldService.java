@@ -1,4 +1,4 @@
-package com.myspring.mycontext.test;
+package com.myspring.mycontext;
 
 /**
  * @Description:

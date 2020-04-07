@@ -6,7 +6,6 @@ import com.myspring.mycontext.bean.BeanDefinition;
 import com.myspring.mycontext.bean.PropertyValue;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**

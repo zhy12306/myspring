@@ -1,4 +1,4 @@
-package com.myspring.mycontext.test.io;
+package com.myspring.mycontext.io;
 
 import com.myspring.mycontext.bean.io.Resource;
 import com.myspring.mycontext.bean.io.ResourceLoader;

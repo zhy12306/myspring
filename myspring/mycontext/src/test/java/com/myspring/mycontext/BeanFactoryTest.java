@@ -1,4 +1,4 @@
-package com.myspring.mycontext.test;
+package com.myspring.mycontext;
 
 import com.myspring.mycontext.bean.BeanDefinition;
 import com.myspring.mycontext.bean.factory.AbstractBeanFactory;
@@ -10,7 +10,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Map;
-import java.util.Set;
 
 /**
  * @ClassName BeanFactoryTest
@@ -54,7 +53,7 @@ public class BeanFactoryTest {
         }
 
         //3.获取bean对象
-        HelloWorld helloWorld = (HelloWorld) beanFactory.getBean("helloWorld");
+        HelloWorldServiceImp helloWorld = (HelloWorldServiceImp) beanFactory.getBean("helloWorld");
         //3.对象调用对象方法
         helloWorld.sayHello();
     }
@@ -75,7 +74,7 @@ public class BeanFactoryTest {
         beanFactory.preInstantiateSingleLetons();
 
         // 4.获取bean
-        HelloWorld helloWorld = (HelloWorld) beanFactory.getBean("helloWorld");
+        HelloWorldServiceImp helloWorld = (HelloWorldServiceImp) beanFactory.getBean("helloWorld");
         //5.对象调用对象方法
         helloWorld.sayHello();
     }

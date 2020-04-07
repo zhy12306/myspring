@@ -2,12 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a231f30d-2245-42fa-a7d6-2f31ddc9a3d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AbstractAopFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/JdkDynamicAopProxyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/Cglib2AopProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/ProxyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/BeanCreateExeception.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/OutputService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/OutputServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/aop/Cglib2AopProxyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AbstractAopFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AbstractAopFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AdvicedSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AdvisedSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AspectJAutowareAdvisorAutoProxyCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AspectJAutowareAdvisorAutoProxyCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AspectJExpressionPointcut.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AspectJExpressionPointcut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AspectJExpressionPointcutAdvisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/AspectJExpressionPointcutAdvisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/JdkDynamicAopProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/JdkDynamicAopProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/ReflectiveMethodInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/ReflectiveMethodInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/TargetSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/TargetSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/PropertyValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/factory/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/factory/AbstractBeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/factory/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/factory/AutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/xml/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/xml/XmlBeanDefinitionReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/context/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/context/AbstractApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/AspectJExpressionPointcutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/AspectJExpressionPointcutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/context/ClassPathXmlApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/context/ClassPathXmlApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/BeanException.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/BeanException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/errorcode/BeanCreateErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/exception/beanexception/errorcode/BeanCreateErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/main/resources/myspringcontextIOC.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/BeanFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/BeanFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/HelloWorldServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/HelloWorldService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/HelloWorldService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/AspectJExpressionPointcutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/aop/AspectJExpressionPointcutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/JdkDynamicAopProxyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/aop/JdkDynamicAopProxyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/TimerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/aop/TimerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/context/ApplicationContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/context/ApplicationContextTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/io/ResourceLoadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/io/ResourceLoadTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mycontext/src/test/resources/myspringcontextIOC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mycontext/src/test/resources/myspringcontextIOC.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +99,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../springLearning/spring-framework" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,11 +113,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mycontext/src/test" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.myspring.mycontext.aop" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.myspring.mycontext" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CodingWork\mytinyspringlearning\myspring\mycontext\src\test\java\com\myspring\mycontext" />
+      <recent name="$PROJECT_DIR$/mycontext/src/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -104,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JdkDynamicAopProxyTest.tset">
+  <component name="RunManager" selected="JUnit.Cglib2AopProxyTest.tset">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="myspring" />
       <working_directory value="$PROJECT_DIR$" />
@@ -128,12 +160,12 @@
       <module name="mycontext" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.myspring.mycontext.test.aop.*" />
+          <option name="PATTERN" value="com.myspring.mycontext.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.myspring.mycontext.test.aop" />
-      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.aop.AspectJExpressionPointcutTest" />
+      <option name="PACKAGE_NAME" value="com.myspring.mycontext.aop" />
+      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.aop.AspectJExpressionPointcutTest" />
       <option name="METHOD_NAME" value="testClassFilter" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -144,13 +176,29 @@
       <module name="mycontext" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.myspring.mycontext.test.aop.*" />
+          <option name="PATTERN" value="com.myspring.mycontext.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.myspring.mycontext.test.aop" />
-      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.aop.AspectJExpressionPointcutTest" />
+      <option name="PACKAGE_NAME" value="com.myspring.mycontext.aop" />
+      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.aop.AspectJExpressionPointcutTest" />
       <option name="METHOD_NAME" value="testMethodInterceptor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Cglib2AopProxyTest.tset" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mycontext" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myspring.mycontext.aop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.myspring.mycontext.aop" />
+      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.aop.Cglib2AopProxyTest" />
+      <option name="METHOD_NAME" value="tset" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,12 +208,12 @@
       <module name="mycontext" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.myspring.mycontext.test.aop.*" />
+          <option name="PATTERN" value="com.myspring.mycontext.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.myspring.mycontext.test.aop" />
-      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.aop.JdkDynamicAopProxyTest" />
+      <option name="PACKAGE_NAME" value="com.myspring.mycontext.aop" />
+      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.aop.JdkDynamicAopProxyTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -175,29 +223,13 @@
       <module name="mycontext" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.myspring.mycontext.test.aop.*" />
+          <option name="PATTERN" value="com.myspring.mycontext.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.myspring.mycontext.test.aop" />
-      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.aop.JdkDynamicAopProxyTest" />
+      <option name="PACKAGE_NAME" value="com.myspring.mycontext.aop" />
+      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.aop.JdkDynamicAopProxyTest" />
       <option name="METHOD_NAME" value="tset" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JdkDynamicProxyTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mycontext" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myspring.mycontext.test.aop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.myspring.mycontext.test.aop" />
-      <option name="MAIN_CLASS_NAME" value="com.myspring.mycontext.test.aop.JdkDynamicProxyTest" />
-      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -205,11 +237,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Cglib2AopProxyTest.tset" />
         <item itemvalue="JUnit.JdkDynamicAopProxyTest.tset" />
         <item itemvalue="JUnit.JdkDynamicAopProxyTest" />
         <item itemvalue="JUnit.AspectJExpressionPointcutTest.testMethodInterceptor" />
         <item itemvalue="JUnit.AspectJExpressionPointcutTest.testClassFilter" />
-        <item itemvalue="JUnit.JdkDynamicProxyTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +290,8 @@
       <workItem from="1585896761937" duration="6699000" />
       <workItem from="1585904951798" duration="4864000" />
       <workItem from="1585981430844" duration="2321000" />
-      <workItem from="1585983771095" duration="17494000" />
+      <workItem from="1585983771095" duration="38866000" />
+      <workItem from="1586228818344" duration="697000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1579487943161</created>
@@ -365,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586004678245</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="将AOP融入Bean的创建过程">
+      <created>1586007888563</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1586007888563</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,35 +457,60 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/xml/XmlBeanDefinitionReader.java</url>
           <line>53</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/xml/XmlBeanDefinitionReader.java</url>
           <line>64</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/xml/XmlBeanDefinitionReader.java</url>
-          <line>34</line>
+          <line>36</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/bean/PropertyValues.java</url>
           <line>27</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/AspectJExpressionPointcutTest.java</url>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/aop/AspectJExpressionPointcutTest.java</url>
           <line>17</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/test/aop/AspectJExpressionPointcutTest.java</url>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/aop/AspectJExpressionPointcutTest.java</url>
           <line>29</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/aop/JdkDynamicAopProxyTest.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/aop/Cglib2AopProxyTest.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/Cglib2AopProxy.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/main/java/com/myspring/mycontext/aop/JdkDynamicAopProxy.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mycontext/src/test/java/com/myspring/mycontext/aop/JdkDynamicAopProxyTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
