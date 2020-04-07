@@ -255,7 +255,7 @@
       <workItem from="1585904951798" duration="4864000" />
       <workItem from="1585981430844" duration="2321000" />
       <workItem from="1585983771095" duration="38866000" />
-      <workItem from="1586228818344" duration="979000" />
+      <workItem from="1586228818344" duration="1820000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1579487943161</created>
@@ -376,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586229594955</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="使用CGLib进行类的织入">
+      <created>1586229905356</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1586229905356</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

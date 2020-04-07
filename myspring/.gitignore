@@ -26,7 +26,7 @@ test-output/
 
 # Nodejs local modulse
 .tags*
-.idea
+.idea/
 *.iml
 .gradle/
 .settings/
